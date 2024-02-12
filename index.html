@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <!-- tailwind and Daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="font-inter border-2 border-green-400 container mx-auto px-4 ">
+    <header>
+
+    </header>
+
+    <main class="border-4 border-purple-800 my-8">
+        <!-- main content container -->
+        <div class="border-4 border-red-500 flex flex-col lg:flex-row">
+            <!-- shapes card container -->
+            <div class="border-2 border-blue-600 flex-1 grid grid-cols-1 lg:grid-cols-3 gap-5 px-2">
+
+                <!-- triangle-->
+                <div class="card bg-base-100 shadow-lg px-6 py-8">
+
+                    <figure class="">
+                        <img src="images/triangle.png" alt="Shoes" class="rounded-xl " />
+                    </figure>
+
+                    <div class="items-center text-center space-y-3 mt-8">
+                        <h2 class="card-title flex justify-center items-center">Triangle</h2>
+
+                        <p class="text-lg font-semibold">Area (A) = 0.5 x b x h</p>
+
+                        <div class="flex justify-between items-center gap-2 ">
+                            <input id="triangle-base"
+                            type="text" placeholder="b" class="w-[100%] rounded-md bg-[#f1f1f1] p-2">
+                            <span>cm</span>
+
+                            <input id="triangle-height"
+                            type="text" placeholder="h" class="w-[100%] rounded-md bg-[#f1f1f1] p-2">
+                            <span>cm</span>
+                        </div>
+
+
+                        <div>
+                            <p class="text-lg">Area: <span id="triangle-area"></span> <span>cm<sup>2</sup>
+                            </span>
+                                
+
+                            </p>
+                        </div>
+
+                        <div class="card-actions w-full">
+                            <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Rectangle -->
+                <div class="card bg-base-100 shadow-lg px-6 py-8">
+
+                   <div class="h-[100%]">
+                    <img src="images/rectangle.png" alt="" class="w-full h-full">
+                   </div>
+
+                    <div class="items-center text-center space-y-3 mt-8">
+                        <h2 class="card-title flex justify-center items-center">Rectangle</h2>
+
+                        <p class="text-lg font-semibold">Area (A) = w x l</p>
+
+                        <div class="flex justify-center items-center gap-2 w-full">
+                            <input id="rectangle-width"
+                             type="text" placeholder="width" class="bg-[#f1f1f1] w-full p-2 rounded-md">
+                            <span>cm</span>
+                            <input id="rectangle-length"
+                            type="text" placeholder="length" class="bg-[#f1f1f1] w-full p-2 rounded-md" >
+                            <span>cm</span>
+                        </div>
+
+                        <div>
+                            <p class="text-lg">Area: <span id="rectangle-area"></span> <span>cm<sup>2</sup></span> </p>
+                        </div>
+
+
+                       
+
+                        <div class="card-actions w-full">
+                            <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parallelogram-->
+                <div class="card bg-base-100 shadow-lg px-6 py-8">
+
+                    <div class="h-[100%]">
+                        <img src="images/parallelogram.png" alt="" class="h-full w-full">
+                    </div>
+
+                    <div class="items-center text-center space-y-3 mt-8">
+                        <h2 class="card-title flex justify-center items-center">Triangle</h2>
+
+                        <p class="text-lg font-semibold">Area (A) = 0.5 x b x h</p>
+
+                        <div class="flex justify-between items-center gap-2 ">
+                            <input id="triangle-base"
+                            type="text" placeholder="b" class="w-[100%] rounded-md bg-[#f1f1f1] p-2">
+                            <span>cm</span>
+
+                            <input id="triangle-height"
+                            type="text" placeholder="h" class="w-[100%] rounded-md bg-[#f1f1f1] p-2">
+                            <span>cm</span>
+                        </div>
+
+
+                        <div>
+                            <p class="text-lg">Area: <span id="triangle-area"></span> <span>cm<sup>2</sup>
+                            </span>
+                                
+
+                            </p>
+                        </div>
+
+                        <div class="card-actions w-full">
+                            <button  class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+           
+               
+        </div>
+
+
+        <!-- calculator -->
+        <div class="w-[25%] text-center">
+            <h3 class="text-lg font-semibold">Area Calculation</h3>
+        </div>
+
+        </div>
+
+
+        <!-- connect triangle -->
+        <script src="script/triangle-calculator.js"></script>
+        <!-- connect rectangle -->
+        <script src="script/rectangle-area.js"></script>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
