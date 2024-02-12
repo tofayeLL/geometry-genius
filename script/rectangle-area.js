@@ -19,7 +19,7 @@ function calculateRectangleArea() {
     const rArea = rWidth * rLength;
     console.log(rArea);
 
-    // display rectangle area
+    // For display rectangle area
     const rectangleArea = document.getElementById('rectangle-area');
     rectangleArea.innerText = rArea;
 
